@@ -58,10 +58,14 @@ exit;
 <div class="p-lg-5">
 <div class="row">
 <div class="col-md-8 mx-auto">
+<?php if($_GET['invite']){ ?>
+<p style="color:green"><strong>You invite was sent successfully</strong></p>
+<?php } ?>
+<br>
 <h1 class="text-white mb-4 mt-2 text-center">Earn <span class="text-warning">10</span> faceflyer coin<br>on every referral</h1>
 <form class="pt-3 referal-flow-form mb-4" action="processInvite" method="post">
 <div class="input-group">
-<input type="email" required class="form-control" placeholder="Enter email ID of your friend">
+<input type="email" required class="form-control" name="" placeholder="Enter email ID of your friend">
 <div class="input-group-append">
 <button class="btn btn-warning" type="submit">
 Invite

@@ -57,7 +57,7 @@ $verified = 3;
 <img src="assets/images/logo.png" class="img-fluid w-40" alt="LOGO">
 <?php if($verified == 3){ ?>
 <h5 class="mt-3 mb-3">You need to verify your email address</h5>
-<p>A mail has been sent to the email you registered with.</p>
+<p>A mail has been sent to the email you registered with. Verify your email to earn 5fc</p>
 <p>Thank you.</p>
 <?php }elseif($verified == 2){ ?>
 <h5 class="mt-3 mb-3">Your email address has already been verified.</h5>

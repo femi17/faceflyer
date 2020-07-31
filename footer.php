@@ -26,7 +26,7 @@
 <h6 class="text-gray-900">CONNECT</h6>
 <ul>
 <li><a href="contact-us">Contact Us</a></li>
-<li><a href="advertise-with-us">Advertise With Us</a></li>
+<li><a href="contact-us">Advertise With Us</a></li>
 <li><a href="support">Support</a></li>
 </ul>
 </div>
@@ -58,8 +58,6 @@ Cashback</span></a></small>
 <div class="d-flex align-items-center justify-content-between">
 <p class="m-0 text-secondary">Copyright © faceflyer <?php echo date('Y'); ?></p>
 <p class="m-0">
-<a href="how-it-works" class="text-secondary">How it Works</a>
-&nbsp; · &nbsp;
 <a href="privacy-policy" class="text-secondary">Privacy Policy</a>
 &nbsp; · &nbsp;
 <a href="terms" class="text-secondary">Terms &amp; Conditions</a>

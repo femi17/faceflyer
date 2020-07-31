@@ -1269,9 +1269,9 @@ height: 45px;
 		display: inline-block;
 		float: none !important;
 	}
-	.footer {
+	/* .footer {
 		display: none;
-	}
+	} */
 	.rating-checkbox .btn {
 		margin-bottom: 8px;
 	}
@@ -1468,9 +1468,9 @@ height: 45px;
 		display: inline-block;
 		float: none !important;
 	}
-	.footer {
+	/* .footer {
 		display: none;
-	}
+	} */
 	.rating-checkbox .btn {
 		margin-bottom: 8px;
 	}
@@ -1661,9 +1661,9 @@ height: 45px;
 		display: inline-block;
 		float: none !important;
 	}
-	.footer {
+	/* .footer {
 		display: none;
-	}
+	} */
 	.offer-dedicated-header .float-right {
 		position: absolute;
 		bottom: 0;

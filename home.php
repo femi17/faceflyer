@@ -116,7 +116,7 @@ class="fa fa-eye fa-sm text-white-50"></i> View All</a>
 <?php } ?>
 </div>
 <div class="row  align-items-center">
-<?php if($nsTask <= 3){
+<?php
 for($t=0; $t<$nsTask; $t++){
 $rsTask = mysqli_fetch_assoc($qsTask);
 ?>
@@ -151,45 +151,7 @@ $rsTask = mysqli_fetch_assoc($qsTask);
 </div>
 </div>
 </div>
-<?php } } }else{ ?>
-<div class="col-lg-12">
-<div class="owl-carousel owl-theme owl-carousel-four homepage-coupon-carousel">
-<?php for($t=0; $t<$nsTask; $t++){
-$rsTask = mysqli_fetch_assoc($qsTask);
-?>
-<?php if($rsTask['end_date'] && $rsTask['end_date'] >= date('Y-m-d') || !$rsTask['end_date']){ ?>
-<div class="item">
-<div class="custom-card shadow-sm h-100 stor-card">
-<a href="javascript:;" data-placement="top" data-toggle="tooltip" data-original-title="<?php echo $rsTask['count']; ?> people completed" class="lock-badges-icon text-center"><i class="icofont-users"></i></a>
-<div class="custom-card-image">
-<a href="task-details/<?php echo $rsTask['id']; ?>">
-<img class="img-fluid item-img" src="assets/images/<?php echo $rsTask['banner']; ?>">
-</a>
-<div class="store-star"><span class="badge badge-success"><i class="icofont-cc"></i> <?php echo $rsTask['coin']; ?></span>
-</div>
-</div>
-<div class="p-3">
-<div class="custom-card-body">
-<h6 class="mb-0"><a class="text-gray-900" href="task-details/<?php echo $rsTask['id']; ?>"><?php echo $rsTask['name']; ?></a></h6>
-<p class="text-gray-500 mb-2"><?php echo $rsTask['category']; ?></p>
-<?php if($rsTask['end_date']){ ?>
-<p class="text-gray mb-0"><span class="text-warning"><i class="icofont-clock-time"></i> Time Left : <?php timeLeft($rsTask['end_date']); ?></span></p>
-<?php }else{ ?>
-<br>
-<?php } ?>
-</div>
-</div>
-<div class="p-3 border-top">
-<div class="custom-card-badge">
-<span class="badge badge-success"><i class="icofont-sale-discount"></i> OFFER</span> Complete task to earn <?php echo $rsTask['coin']; ?> FC
-</div>
-</div>
-</div>
-</div>
 <?php } } ?>
-</div>
-</div>
-<?php } ?>
 </div>
 </div>
 </section>

@@ -79,10 +79,6 @@ Dashboard
 <i class="fa fa-cogs fa-sm fa-fw mr-2 text-gray-500-400"></i>
 Settings
 </a>
-<a class="dropdown-item" href="activity-log">
-<i class="fa fa-list fa-sm fa-fw mr-2 text-gray-500-400"></i>
-Activity Log
-</a>
 <a class="dropdown-item" href="referral">
 <i class="fa fa-users fa-sm fa-fw mr-2 text-gray-500-400"></i>
 Refer & Earn

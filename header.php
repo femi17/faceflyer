@@ -91,5 +91,18 @@ Logout
 </div>
 </li>
 </ul>
+<?php }else{ ?>
+<ul class="list-inline mr-5">
+<li class="list-inline-item">
+<a class="border rounded p-2 btn-primary" href="./">
+Sign in
+</a>
+</li>
+<li class="list-inline-item">
+<a class="border rounded p-2" href="sign-up">
+Sign up
+</a>
+</li>
+</ul>
 <?php } ?>
 </nav>

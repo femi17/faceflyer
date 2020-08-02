@@ -69,10 +69,10 @@ placeholder="Ask a question" aria-label="Ask a question" aria-describedby="askQu
 <!-- Text/Links -->
 <p class="text-white">
 Popular help topics:
-<a class="text-warning ml-1" href="#">pricing,</a>
-<a class="text-warning ml-1" href="#">upgrade,</a>
-<a class="text-warning ml-1" href="#">hosting,</a>
-<a class="text-warning ml-1" href="#">membership</a>
+<a class="text-warning ml-1" href="#">tasks,</a>
+<a class="text-warning ml-1" href="#">deals,</a>
+<a class="text-warning ml-1" href="#">cashback,</a>
+<a class="text-warning ml-1" href="#">account</a>
 </p>
 <!-- End Text/Links -->
 </div>
@@ -140,7 +140,7 @@ Look no further!
 class="shadow-none btn btn-block d-flex justify-content-between card-btn p-3 collapsed"
 data-toggle="collapse" data-target="#basicsCollapseOne" aria-expanded="false"
 aria-controls="basicsCollapseOne">
-Do you have any built-in caching?
+Why Didn’t I Earn FC from my Cash Back?
 <span class="card-btn-arrow">
 <span class="icofont-rounded-down"></span>
 </span>
@@ -150,14 +150,11 @@ Do you have any built-in caching?
 <div id="basicsCollapseOne" class="collapse" aria-labelledby="basicsHeadingOne"
 data-parent="#basicsAccordion">
 <div class="card-body border-top p-3 text-muted">
-Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
-brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
-nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you
-probably haven't heard of them accusamus labore sustainable VHS.
+If you made a purchase and don’t see Cash Back in your account, it may be due to one of these reasons:<br><br>
+
+<b>Shopping at a store that doesnt offer cashback</b>. Going to stores, especially ones that doesnt offer shopping rewards, deals or cashback, can result in you not earning cashback after every puchase. Please visit the cashback page to see list of stores that offers cashback and reward customers.<br><br>
+<b>We could verify your proof of purchase</b>. After reviewing or verifing the evidence, we could not come to a conclusion that an item have been bought from the store you are claiming cashback from<br><br>
+<b>Cashback earned is lower</b>. To convert cashback after every purchase, you need the sum of N500 in cashback to earn 2fc. If you receive lower than N500 in cashback then you would not earn any FC <br><br>
 </div>
 </div>
 </div>

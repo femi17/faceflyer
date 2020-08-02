@@ -104,6 +104,8 @@ class="icofont-users-alt-4 text-danger mr-2"></i> <?php echo $rsTask['count'] ?>
 <?php }else{ ?>
 <i class="ml-4 icofont-clock-time text-danger mr-2"></i> This tasks has ended
 <?php } ?>
+&nbsp;&nbsp;
+<i class="icofont-tasks text-danger mr-2"></i> <?php echo $rsTask['category']; ?>
 </div>
 </div>
 <div

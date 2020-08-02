@@ -66,7 +66,7 @@
 </div>
 <button type="submit" class="btn btn-primary btn-block btn-lg mt-4">Sign Up</button>
 <br>
-<p class="light-gray small">By Signing up I agree to the <a href="terms-condition">Terms</a> and <a href="privacy-policy">Privacy Policy</a>.</p>
+<p class="light-gray small">By Signing up I agree to the <a href="terms">Terms</a> and <a href="privacy-policy">Privacy Policy</a>.</p>
 </form>
 <div class="text-center mt-5">
 <p class="light-gray">Already have an Account? <a href="./">Sign In</a></p>

@@ -40,7 +40,7 @@ exit;
 <!-- Navigation -->
 <nav class="navbar navbar-expand navbar-light bg-white osahan-deel-nav-top py-4">
 <div class="container">
-<a class="navbar-brand py-0 mr-2" href="home"><img class="w-40" src="../assets/images/logo.png" alt="#"> <span
+<a class="navbar-brand py-0 mr-2" href="../home"><img class="w-40" src="../assets/images/logo.png" alt="#"> <span
 class="small ml-3">Home</span>
 </a>
 </div>

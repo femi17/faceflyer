@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white navbar-light shadow-sm topbar osahan-top-main">
 <!-- Sidebar Toggle (Topbar) -->
-<a class="navbar-brand" href="home">
+<a class="navbar-brand" href="../home">
 <img class="img-fluid w-40" src="../assets/images/logo.png">
 </a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

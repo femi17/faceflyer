@@ -93,7 +93,9 @@ src="../assets/images/<?php echo $rsCash['banner'] ?>">
 <h6 class="coupon-deal-detail-main-body-p font-weight-light pr-lg-5 text-secondary">
 <?php echo $rsCash['description'] ?></h6>
 <p class="mb-0 mt-4 font-weight-light text-gray-500"><i
-class="icofont-users-alt-4 text-danger mr-2"></i> <?php echo $rsCash['count'] ?> People use this cashback &nbsp;&nbsp;<i class="icofont-cc"></i> <span class="pull-right">Earn 2 FC per ₦500</span></p>
+class="icofont-users-alt-4 text-danger mr-2"></i> <?php echo $rsCash['count'] ?> People use this cashback &nbsp;&nbsp;<i class="icofont-cc text-danger mr-2"></i> <span class="pull-right">Earn 2 FC per ₦500</span>&nbsp;&nbsp;
+<i class="icofont-map-pins text-danger mr-2"></i> <?php echo merchantSignin($rsDeal['store'], 'location'); ?>
+</p>
 </div>
 </div>
 <div

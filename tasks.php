@@ -17,7 +17,7 @@ $currentPage = 1;
 }
 $startFrom = ($currentPage * $showRecordPerPage) - $showRecordPerPage;
 
-$totalEmpSQL = "SELECT * FROM tasks order by id desc";
+$totalEmpSQL = "SELECT * FROM tasks where status = 'approved' && end_date >= CURDATE() || status = 'approved' && end_date = '' order by rand()";
 
 $allEmpResult = mysqli_query($connect, $totalEmpSQL);
 $totalEmployee = mysqli_num_rows($allEmpResult);
@@ -27,7 +27,7 @@ $firstPage = 1;
 $nextPage = $currentPage + 1;
 $previousPage = $currentPage - 1;
 
-$empSQL = "SELECT * FROM tasks order by id desc LIMIT $startFrom, $showRecordPerPage";
+$empSQL = "SELECT * FROM tasks where status = 'approved' && end_date >= CURDATE() || status = 'approved' && end_date = '' order by rand() LIMIT $startFrom, $showRecordPerPage";
 
 $empResult = mysqli_query($connect, $empSQL);
 

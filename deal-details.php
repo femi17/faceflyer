@@ -95,15 +95,18 @@ $ns = mysqli_num_rows($qs);
 </h3>
 <h6 class="coupon-deal-detail-main-body-p font-weight-light pr-lg-5 text-secondary">
 <?php echo $rsDeal['description'] ?></h6>
+
 <p class="mb-0 mt-4 font-weight-light text-gray-500"><i
 class="icofont-users-alt-4 text-danger mr-2"></i> <?php echo $rsDeal['count'] ?> People completed task
 <?php if($rsDeal['end_date'] && $rsDeal['end_date'] > date('Y-m-d')){ ?>
 <i class="ml-4 icofont-clock-time text-danger mr-2"></i> Ends <?php echo date('m.d.Y', strtotime($rsDeal['end_date']))?></p>
 <?php }elseif($rsDeal['end_date'] == ""){ ?>
-<i class="ml-4 icofont-clock-time text-danger mr-2"></i> anytime</p>
+<i class="ml-4 icofont-clock-time text-danger mr-2"></i> anytime
 <?php }else{ ?>
 <i class="ml-4 icofont-clock-time text-danger mr-2"></i> This deal has ended
-<?php } ?>
+<?php } ?><br>
+<i class="icofont-map-pins text-danger mr-2"></i> <?php echo merchantSignin($rsDeal['store'], 'location'); ?>
+</p>
 </div>
 </div>
 <div

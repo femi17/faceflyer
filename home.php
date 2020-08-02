@@ -69,21 +69,21 @@ $nsCash = mysqli_num_rows($qsCash);
 </div>
 
 <div class="homepage-search-form">
-<form class="form-noborder">
+<form class="form-noborder" method="post" action="search">
 <div class="form-row">
 <div class="col-lg-3 col-md-3 col-sm-12 form-group">
 <div class="location-dropdown">
 <i class="icofont-location-arrow"></i>
-<select class="custom-select form-control-lg">
-<option> All </option>
-<option> Task </option>
-<option> Deals </option>
-<option> Cashback </option>
+<select name="module" class="custom-select form-control-lg">
+<option value=""> All </option>
+<option value="Tasks"> Tasks </option>
+<option value="Deals"> Deals </option>
+<option value="Cashback"> Cashback </option>
 </select>
 </div>
 </div>
 <div class="col-lg-7 col-md-7 col-sm-12 form-group">
-<input type="text" placeholder="Search for tasks, deals, & cashback…"
+<input type="text" name="search" placeholder="Search for tasks, deals, & cashback…"
 class="form-control border-0 form-control-lg shadow-sm">
 </div>
 <div class="col-lg-2 col-md-2 col-sm-12 form-group">

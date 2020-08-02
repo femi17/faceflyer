@@ -320,4 +320,86 @@ return $x;
 
 }
 
+function find_query_task($search){
+
+global $connect;
+
+$qsPhase = mysqli_query($connect, "select * from tasks where name like '%$search%' || category like '%$search%'");
+$nsPhase = mysqli_num_rows($qsPhase);
+
+if($nsPhase > 0){
+
+for($p=0; $p<$nsPhase; $p++){
+$rsPhase = mysqli_fetch_assoc($qsPhase);
+
+if(stristr($rsPhase['name'], $search)){
+$div .= '
+<li class="list-group-item">Found under task name:<br> <strong><a href="task-details/'. $rsPhase['id'].'">'.$rsPhase['name'].'</a></strong></li>';
+}
+if(stristr($rsPhase['category'], $search)){
+$div .= '
+<li class="list-group-item">Found under task category:<br> <strong><a href="task-details/'. $rsPhase['id'].'">'.$rsPhase['category'].'</a></strong></li>';
+}
+}
+}else{
+$div = '<li class="list-group-item">No <strong>'.$search.'</strong> found under Tasks</li>';
+}
+return $div;
+}
+
+function find_query_deal($search){
+
+global $connect;
+
+$qsPhase = mysqli_query($connect, "select * from deals where name like '%$search%' || category like '%$search%' || headline like '%$search%'");
+$nsPhase = mysqli_num_rows($qsPhase);
+
+if($nsPhase > 0){
+
+for($p=0; $p<$nsPhase; $p++){
+$rsPhase = mysqli_fetch_assoc($qsPhase);
+
+if(stristr($rsPhase['name'], $search)){
+$div .= '
+<li class="list-group-item">Found under deal name:<br> <strong><a href="deal-details/'. $rsPhase['id'].'">'.$rsPhase['name'].'</a></strong></li>';
+}
+if(stristr($rsPhase['category'], $search)){
+$div .= '
+<li class="list-group-item">Found under deal category:<br> <strong><a href="deal-details/'. $rsPhase['id'].'">'.$rsPhase['category'].'</a></strong></li>';
+}
+if(stristr($rsPhase['headline'], $search)){
+$div .= '
+<li class="list-group-item">Found under task category:<br> <strong><a href="deal-details/'. $rsPhase['id'].'">'.$rsPhase['headline'].'</a></strong></li>';
+}
+}
+}else{
+$div = '<li class="list-group-item">No <strong>'.$search.'</strong> found under Deals</li>';
+}
+return $div;
+}
+
+
+function find_query_cashback($search){
+
+global $connect;
+
+$qsPhase = mysqli_query($connect, "select * from cashback where name like '%$search%'");
+$nsPhase = mysqli_num_rows($qsPhase);
+
+if($nsPhase > 0){
+
+for($p=0; $p<$nsPhase; $p++){
+$rsPhase = mysqli_fetch_assoc($qsPhase);
+
+if(stristr($rsPhase['name'], $search)){
+$div .= '
+<li class="list-group-item">Found under cashback name:<br> <strong><a href="cashback-details/'. $rsPhase['id'].'">'.$rsPhase['name'].'</a></strong></li>';
+}
+}
+}else{
+$div = '<li class="list-group-item">No <strong>'.$search.'</strong> found under Cashback</li>';
+}
+return $div;
+}
+
 ?>

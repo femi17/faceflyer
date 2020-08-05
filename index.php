@@ -102,7 +102,7 @@ placeholder="Enter email address">
 </li>
 </ul>
 <br><br>
-<p><a href="how-it-works">How it works</a> | <a href="about-us">About us</a> | <a href="advertise-with-us">Advertise with us</a> | <a href="contact-us">Contact us</a></p>
+<p><a href="how-it-works">How it works</a> | <a href="about-us">About us</a> | <a href="contact-us">Advertise with us</a> | <a href="contact-us">Contact us</a></p>
 </div>
 </div>
 </div>

@@ -170,7 +170,7 @@ class="icofont-sale-discount"></i> OFFER</span> <?php echo $rs['coin']; ?> FC
 <li>Once you fulfil this deal, upload an evidence in other to clain coin attach to this deal.</li>
 <li>You will receive pending FC after proof has been confirmed</a>
 </li>
-<li>Please read the <a href="terms">T&C</a> to learn more.</li>
+<li>Please read the <a href="../terms">T&C</a> to learn more.</li>
 </ul>
 </div>
 <div class="bg-white shadow-sm rounded mb-4">

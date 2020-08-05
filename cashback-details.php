@@ -160,7 +160,7 @@ class="icofont-sale-discount"></i> OFFER</span> Spend ₦<?php echo $rs['spend']
 <li>Once you shop this product at the store, upload evidence of you purchasing this product.</li>
 <li>You will receive pending cashback after purchase has been confirmed</a>
 </li>
-<li>Please read the <a href="terms">T&C</a> to learn more.</li>
+<li>Please read the <a href="../terms">T&C</a> to learn more.</li>
 </ul>
 </div>
 <div class="bg-white shadow-sm rounded mb-4">

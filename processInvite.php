@@ -10,9 +10,11 @@ $subject = "You are invited to join faceflyer";
 $message = 'Hi<br><br>
 Have you heard about faceflyer? Well, '.fetchData('users', $_SESSION['facer'], 'uID', 'firstname').' thinks its a great way for you to explore and put cash back in your wallet.<br><br>
 We feel the same way and that is why we would love you to sign up on faceflyer and take it for a spin.<br><br>
-Follow the link to sign up today!
+Follow the link to sign up today!<br>
+P.S: Use your friend\'s referral code when signing up.<br>
+<b>'.$_SESSION['facer'].'</b><br>
 <center>
-<a rel="nofollow" style="text-decoration:none" class="yiv4360069400ln-button" target="_blank" href="https://www.faceflyer.com/">Sign up now!</a>
+<a rel="nofollow" style="text-decoration:none" class="yiv4360069400ln-button" target="_blank" href="https://www.faceflyer.com/sign-up">Sign up now!</a>
 </center><br><br>
 We hope to see you soon.';
 

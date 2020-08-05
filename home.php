@@ -277,7 +277,8 @@ d="M2160 0C1440 240 720 240 720 240H0V480H2880V0H2160Z" fill="currentColor">
 <div class="custom-card-body">
 <h6 class="mb-1"><a class="text-gray-900" href="cashback-details/<?php echo $rsCash['id']; ?>"><?php echo $rsCash['name']; ?></a></h6>
 <p class="text-gray-500 mb-2"><i class="icofont-price"></i> <span
-class="text-gray-600 font-weight-bold">₦<?php echo $rsCash['spend']; ?></span></p>
+class="text-gray-600 font-weight-bold">₦<?php echo $rsCash['spend']; ?></span><span
+class="text-gray-600 font-weight-bold" style="float:right"><i class="icofont-building"></i> <?php echo merchantSignin($rsCash['store'], 'store_name'); ?></span></p>
 </div>
 <div class="custom-card-badge mt-2">
 <span class="badge badge-success">OFFER</span> Earn 2 FC per ₦500

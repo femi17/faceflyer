@@ -170,7 +170,7 @@ class="icofont-sale-discount"></i> OFFER</span> <?php echo $rs['coin']; ?> FC
 <li>Once task has been completed, click to claim <a href="coin">coin</a> attached to this task. Upload evidence of you completing the task</li>
 <li>Evidence will be verified and coin added to your account</a>
 </li>
-<li>Please read the <a href="terms">T&C</a> to learn more.</li>
+<li>Please read the <a href="../terms">T&C</a> to learn more.</li>
 </ul>
 </div>
 <div class="bg-white shadow-sm rounded mb-4">

@@ -8,6 +8,30 @@ $('.sidebar .collapse').collapse('hide');
 };
 });
 
+$("#submitEmail").click(function(){
+var email = $('#subEmail').val();
+$.ajax({
+type: "POST",
+url: "processSubscription.php",
+data: {email:email},
+success: function(response){
+$('#subMsg').html(response);
+}
+});
+});
+
+$("#submitEmail2").click(function(){
+var email = $('#subEmail2').val();
+$.ajax({
+type: "POST",
+url: "../processSubscription.php",
+data: {email:email},
+success: function(response){
+$('#subMsg2').html(response);
+}
+});
+});
+
 function load_unseen_notification2(view = '')
 {
 $.ajax({

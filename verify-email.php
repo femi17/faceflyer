@@ -30,7 +30,7 @@ $verified = 3;
 <!-- Favicon Icon -->
 <link rel="icon" type="image/png" href="assets/images/logo.png">
 <!-- Custom fonts for this template-->
-<link href="assets/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
 <!-- Custom styles for this template-->
 <link href="assets/css/theme.css" rel="stylesheet">
 <!-- Material Design Icons -->

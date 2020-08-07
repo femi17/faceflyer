@@ -32,11 +32,12 @@
 </div>
 <div class="col-xl-4 col-sm-6">
 <h6 class="text-gray-900">Subscribe to our Newsletter</h6>
+<p id="subMsg"></p>
 <form class="form-inline newsletter-form mb-1">
-<input type="text" class="form-control mr-sm-2" placeholder="Enter your email">
-<button type="submit" class="btn btn-primary">Subscribe</button>
+<input type="text" class="form-control mr-sm-2" id="subEmail" placeholder="Enter your email">
+<button type="button" id="submitEmail" class="btn btn-primary">Subscribe</button>
 </form>
-<small><a href="#">Register now to get updates on <span class="text-info">Tasks, Deals and
+<small><a href="javascript:;">Register now to get updates on <span class="text-info">Tasks, Deals and
 Cashback</span></a></small>
 <div class="app mt-4 pt-2">
 <h6 class="text-gray-900">COMING SOON</h6>

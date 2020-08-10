@@ -102,6 +102,9 @@ Logout</button>
 <?php if($_GET['error']){ ?>
 <p style="color:#c00"><strong>Password not found</strong>. Please check and try again.</p>
 <?php } ?>
+<?php if($_GET['update']){ ?>
+<p style="color:#c00"><strong>Please update profile before you get any offer</strong></p>
+<?php } ?>
 <?php if($_GET['captcha']){ ?>
 <p style="color:#c00"><strong>Captcha error</strong>. Please check and try again.</p>
 <?php } ?>

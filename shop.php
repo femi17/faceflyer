@@ -1,13 +1,27 @@
+<?php
+session_start();
+require('Connection/connect.php');
+require_once('fns.php');
+
+if(!$_SESSION['facer']){
+header('Location: ./');
+exit;
+}
+
+$qsR = mysqli_query($connect, "select * from reward order by rand()");
+$nsR = mysqli_num_rows($qsR);
+
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
 
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Earn faceflyer coin each time you complete a task, shop at your favorite store. A complete customer reward system">
+<meta name="description" content="Faceflyer - A complete customer reward system, earn faceflyer coin each time you complete a task, shop deals at a store, or get cash back on every purchase from your favorite store">
 
-<title>Faceflyer - Tasks, Deals & Cashback</title>
+<title>Faceflyer - Shop</title>
 <!-- Favicon Icon -->
 <link rel="icon" type="image/png" href="assets/images/logo.png">
 <!-- Custom fonts for this template-->
@@ -46,166 +60,27 @@
 <h1 class="mb-3 text-shadow text-gray-900 font-weight-bold">Time for reward</h1>
 <h5 class="mb-5 text-shadow text-gray-800 font-weight-normal"><em>Put cash back in your wallet!</em></h5>
 </div>
-<div class="d-sm-flex align-items-center justify-content-between mb-4">
-<h1 class="h5 mb-0 text-gray-900">Grocery</h1>
-<a href="all-shop" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-class="fa fa-eye fa-sm text-white-50"></i> View All</a>
+<div class="row clearfix">
+<?php for($r=0;$r<$nsR;$r++){
+$rsR = mysqli_fetch_assoc($qsR);
+?>
+<div class="col-xl-3 col-sm-6" style="margin-bottom:20px;">
+<div class="custom-card shadow-sm h-100 stor-card">
+<div class="custom-card-image">
+<a href="gift/<?php echo str_replace(' ','-',$rsR['name']); ?>">
+<img class="img-fluid item-img" src="assets/images/<?php echo $rsR['banner']; ?>">
+</a>
 </div>
-<div class="row align-items-center">
-<div class="col-lg-12">
-<div class="owl-carousel owl-theme owl-carousel-four homepage-coupon-carousel">
-<div class="item">
-<div class="bg-white p-4 shadow-sm text-center h-100 border-radius">
-<div class="all-coupon">
-<img class="mb-3 user-cou-img" src="assets/images/1.png"
-alt="Generic placeholder image">
-<h4 class="mt-1 h5 text-gray-900">50% OFF</h4>
-<h6 class="mb-4 mt-3 pb-2 text-secondary font-weight-normal">Get Flat 50% OFF On
-First Order</h6>
-</div>
-<div class="mb-0">
-<p class="mb-0 text-gray-500"><i class="icofont-clock-time"></i> Ends 09.15.2020</p>
-</div>
-</div>
-</div>
-<div class="item">
-<div class="bg-white p-4 shadow-sm text-center h-100 border-radius">
-<div class="all-coupon">
-<img class="mb-3 user-cou-img" src="assets/images/2.png"
-alt="Generic placeholder image">
-<h4 class="mt-1 h5 text-gray-900">Buy 1 Get 1 Free</h4>
-<h6 class="mb-4 mt-3 pb-2 text-secondary font-weight-normal">Get Flat 50% OFF On
-First Order</h6>
-</div>
-<div class="mb-0">
-<p class="mb-0 text-gray-500"><i class="icofont-clock-time"></i> Ends 09.15.2020</p>
-</div>
-</div>
-</div>
-<div class="item">
-<div class="bg-white p-4 shadow-sm text-center h-100 border-radius">
-<div class="all-coupon">
-<img class="mb-3 user-cou-img" src="assets/images/33.png"
-alt="Generic placeholder image">
-<h4 class="mt-1 h5 text-gray-900">Free Burger</h4>
-<h6 class="mb-4 mt-3 pb-2 text-secondary font-weight-normal">Get Flat 50% OFF On
-First Order</h6>
-</div>
-<div class="mb-0">
-<p class="mb-0 text-gray-500"><i class="icofont-clock-time"></i> Ends 09.15.2020</p>
-</div>
-</div>
-</div>
-<div class="item">
-<div class="bg-white p-4 shadow-sm text-center h-100 border-radius">
-<div class="all-coupon">
-<img class="mb-3 user-cou-img" src="assets/images/4.png"
-alt="Generic placeholder image">
-<h4 class="mt-1 h5 text-gray-900">80% OFF</h4>
-<h6 class="mb-4 mt-3 pb-2 text-secondary font-weight-normal">Get Flat 50% OFF On
-First Order</h6>
-</div>
-<div class="mb-0">
-<p class="mb-0 text-gray-500"><i class="icofont-clock-time"></i> Ends 09.15.2020</p>
-</div>
-</div>
-</div>
-<div class="item">
-<div class="bg-white p-4 shadow-sm text-center h-100 border-radius">
-<div class="all-coupon">
-<img class="mb-3 user-cou-img" src="assets/images/5.png"
-alt="Generic placeholder image">
-<h4 class="mt-1 h5 text-gray-900">50% OFF</h4>
-<h6 class="mb-4 mt-3 pb-2 text-secondary font-weight-normal">Get Flat 50% OFF On
-First Order</h6>
-</div>
-<div class="mb-0">
-<p class="mb-0 text-gray-500"><i class="icofont-clock-time"></i> Ends 09.15.2020</p>
+<div class="p-3">
+<div class="custom-card-body">
+<h6 class="mb-0"><a class="text-gray-900" href="gift/<?php echo str_replace(' ','-',$rsR['name']); ?>"><?php echo $rsR['name']; ?></a></h6>
+<p class="text-gray-500 mb-2">from <?php echo $rsR['price']; ?> FC</p>
 </div>
 </div>
 </div>
 </div>
-</div>
-</div>
-<br><br>
-<div class="d-sm-flex align-items-center justify-content-between mb-4">
-<h1 class="h5 mb-0 text-gray-900">Airtime & Data</h1>
-</div>
-<div class="row align-items-center">
-<div class="col-lg-12">
-<div class="owl-carousel owl-theme owl-carousel-four homepage-coupon-carousel">
-<div class="item">
-<div class="bg-white p-4 shadow-sm text-center h-100 border-radius">
-<div class="all-coupon">
-<img class="mb-3 user-cou-img" src="assets/images/1.png"
-alt="Generic placeholder image">
-<h4 class="mt-1 h5 text-gray-900">50% OFF</h4>
-<h6 class="mb-4 mt-3 pb-2 text-secondary font-weight-normal">Get Flat 50% OFF On
-First Order</h6>
-</div>
-<div class="mb-0">
-<p class="mb-0 text-gray-500"><i class="icofont-clock-time"></i> Ends 09.15.2020</p>
-</div>
-</div>
-</div>
-<div class="item">
-<div class="bg-white p-4 shadow-sm text-center h-100 border-radius">
-<div class="all-coupon">
-<img class="mb-3 user-cou-img" src="assets/images/2.png"
-alt="Generic placeholder image">
-<h4 class="mt-1 h5 text-gray-900">Buy 1 Get 1 Free</h4>
-<h6 class="mb-4 mt-3 pb-2 text-secondary font-weight-normal">Get Flat 50% OFF On
-First Order</h6>
-</div>
-<div class="mb-0">
-<p class="mb-0 text-gray-500"><i class="icofont-clock-time"></i> Ends 09.15.2020</p>
-</div>
-</div>
-</div>
-<div class="item">
-<div class="bg-white p-4 shadow-sm text-center h-100 border-radius">
-<div class="all-coupon">
-<img class="mb-3 user-cou-img" src="assets/images/33.png"
-alt="Generic placeholder image">
-<h4 class="mt-1 h5 text-gray-900">Free Burger</h4>
-<h6 class="mb-4 mt-3 pb-2 text-secondary font-weight-normal">Get Flat 50% OFF On
-First Order</h6>
-</div>
-<div class="mb-0">
-<p class="mb-0 text-gray-500"><i class="icofont-clock-time"></i> Ends 09.15.2020</p>
-</div>
-</div>
-</div>
-<div class="item">
-<div class="bg-white p-4 shadow-sm text-center h-100 border-radius">
-<div class="all-coupon">
-<img class="mb-3 user-cou-img" src="assets/images/4.png"
-alt="Generic placeholder image">
-<h4 class="mt-1 h5 text-gray-900">80% OFF</h4>
-<h6 class="mb-4 mt-3 pb-2 text-secondary font-weight-normal">Get Flat 50% OFF On
-First Order</h6>
-</div>
-<div class="mb-0">
-<p class="mb-0 text-gray-500"><i class="icofont-clock-time"></i> Ends 09.15.2020</p>
-</div>
-</div>
-</div>
-<div class="item">
-<div class="bg-white p-4 shadow-sm text-center h-100 border-radius">
-<div class="all-coupon">
-<img class="mb-3 user-cou-img" src="assets/images/5.png"
-alt="Generic placeholder image">
-<h4 class="mt-1 h5 text-gray-900">50% OFF</h4>
-<h6 class="mb-4 mt-3 pb-2 text-secondary font-weight-normal">Get Flat 50% OFF On
-First Order</h6>
-</div>
-<div class="mb-0">
-<p class="mb-0 text-gray-500"><i class="icofont-clock-time"></i> Ends 09.15.2020</p>
-</div>
-</div>
-</div>
-</div>
-</div>
+<?php } ?>
+
 </div>
 </div>
 </section>

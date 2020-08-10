@@ -9,6 +9,8 @@ src="../assets/images/logo.png">
 <a href="add-task"><i class="icofont-ticket"></i> Add Tasks</a>
 <a href="add-deal"><i class="icofont-fire"></i> Add Deals</a>
 <a href="add-cashback"><i class="icofont-sale-discount"></i> Add Cashback</a>
+<a href="reward"><i class="icofont-gift"></i> reward</a>
+<a href="buy-gift"><i class="icofont-shopify"></i> Buy Gift</a>
 <a href="dashboard"><i class="icofont-dashboard"></i> Dashboard</a>
 </div>
 </div>

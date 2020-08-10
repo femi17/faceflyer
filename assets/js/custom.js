@@ -89,6 +89,12 @@ setInterval(function(){
  load_unseen_notification();;
 }, 5000);
 
+$('#little').click(function(){
+$('#note').css('display','block');
+setTimeout(function(){
+$('#note').css('display','none');
+}, 5000);
+});
 
 setTimeout(function(){
 $('#leadboard').css('display','none');

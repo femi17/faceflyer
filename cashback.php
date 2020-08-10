@@ -124,7 +124,7 @@ $empResult = mysqli_query($connect, $empSQL);
 </div>
 <?php while ($row = mysqli_fetch_assoc($empResult)) { ?>
 
-<div class="col-xl-3 col-sm-6">
+<div class="col-xl-3 col-sm-6" style="margin-bottom:25px;">
 <div class="custom-card shadow-sm bg-white h-100">
 <a href="javascript:;" data-placement="top" data-toggle="tooltip" data-original-title="<?php echo $row['count']; ?> people fulfill" class="lock-badges-icon text-center"><i class="icofont-users"></i></a>
 <div class="custom-card-image">

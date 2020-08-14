@@ -115,7 +115,7 @@ $rsGift = mysqli_fetch_assoc($qsGift);
 </label>
 OR&nbsp;
 <label class="btn buy_field btn-outline-secondary">
-<input type="text" name="buy" autocomplete="off" placeholder="Set your own" value="" id="buy" style="border:none;width:80px">
+<input type="number" name="buy" autocomplete="off" placeholder="Set your own" value="" id="buy" style="border:none;width:90px">
 </label>
 </div>
 </div>

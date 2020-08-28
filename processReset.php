@@ -2,7 +2,7 @@
 session_start();
 require('Connection/connect.php');
 require_once('fns.php');
-define("RECAPTCHA_V3_SECRET_KEY", '6Ld8h60ZAAAAAE4MTmxiOZql2m5eg67KvsEZO-Jc');
+define("RECAPTCHA_V3_SECRET_KEY", '6LcNS7AZAAAAAH8jx9ciYgzjMJpGRj_ifwP4nNPR');
 
 $email = mysqli_real_escape_string($connect, $_POST['email']);
 $hpass = md5($_POST['password']);
@@ -29,7 +29,7 @@ $row = mysqli_fetch_assoc($query);
 
 if($foundUser > 0){
 
-$_SESSION['facer'] = $row['email'];
+$_SESSION['facer'] = $row['uID'];
 
 mysqli_query($connect, "update users set password = '$hpass', otp = '' where email = '$email'");
 
@@ -42,7 +42,7 @@ exit;
 }
 }else{
 
-header('Location: reset-password?captcha=1');
+header('Location: reset-password?p='.base64_encode($email).'&rt='.base64_encode($otp).'&captcha=1');
 exit;
 
 }

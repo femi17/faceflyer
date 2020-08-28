@@ -25,6 +25,8 @@
 <link rel="stylesheet" href="assets/css/owl.theme.css">
 <!-- Custom styles for this template-->
 <link href="assets/css/style.css" rel="stylesheet">
+<script data-ad-client="ca-pub-3837054503315569" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 </head>
 
 <body class="login-main-body">
@@ -35,7 +37,7 @@
 <img src="assets/images/logo.png" class="img-fluid w-40" alt="LOGO">
 
 <h3 class="mt-3 mb-3">You have been shopping, <br>now it is time we reward<br>you for every purchase</h3>
-<p>Earn coin for everyday thing you do online and offline</p>
+<p>Earn coin for the everyday thing you do online and offline</p>
 <p>tasks | deals | cashback</p>
 <br>
 <h4 class="mt-3 mb-3">Make your Business <br>Boom as a<br> Faceflyer Merchant</h4>
@@ -86,17 +88,17 @@ placeholder="Enter email address">
 <br>
 <ul class="list-inline mb-0">
 <li class="list-inline-item">
-<a class="border rounded p-2" href="#">
+<a class="border rounded p-2" href="https://www.facebook.com/Faceflyer-114018070424187/" target="_blank">
 <span class="icofont-facebook"></span>
 </a>
 </li>
 <li class="list-inline-item">
-<a class="border rounded p-2" href="#">
+<a class="border rounded p-2" href="https://www.instagram.com/faceflyerng/" target="_blank">
 <span class="icofont-instagram"></span>
 </a>
 </li>
 <li class="list-inline-item">
-<a class="border rounded p-2" href="#">
+<a class="border rounded p-2" href="https://twitter.com/faceflyer1" target="_blank">
 <span class="icofont-twitter"></span>
 </a>
 </li>

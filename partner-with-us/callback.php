@@ -36,7 +36,7 @@ mysqli_query($connect, "update merchant set package = 'subscribed', plan = '{$_S
 
 $subject = "Upgrade Successful";
 $message = 'Hi '.merchantSignin($_SESSION['faceMerchant'], 'store_name').'<br><br>
-You subscription to the '.$_SESSION['facePlan'].' was successful.<br><br>
+You subscription to the '.$_SESSION['facePlan'].' plan was successful.<br><br>
 You can begin to enjoy and explore more on faceflyer';
 
 $from_email = 'no-reply@faceflyer.com';
@@ -47,7 +47,7 @@ $_SESSION['package'] = "subscribed";
 $_SESSION['plan'] = $_SESSION['facePlan'];
 unset($_SESSION['facePlan']);
 
-header('Location: dashboard?plan=1');
+header('Location: http://faceflyer.com/partner-with-us/dashboard?plan=1');
 exit;
 
 }else{

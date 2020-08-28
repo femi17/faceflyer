@@ -1,7 +1,7 @@
 <?php
 if($_GET['rt']){
 $otp = base64_decode($_GET['rt']);
-$email = base64_decode($_GET['email']);
+$email = base64_decode($_GET['p']);
 }
 ?>
 <!DOCTYPE html>
@@ -53,11 +53,11 @@ $email = base64_decode($_GET['email']);
 <?php } ?>
 </div>
 <form action="processReset" method="post"  id="reset-form">
-<div class="form-group floating-label-form-group">
+<div class="form-group">
 <label>OTP</label>
-<input type="text" name="email" class="form-control" value="<?php $otp ?>" readonly>
+<input type="text" name="otp" class="form-control" value="<?php echo $otp ?>" readonly>
 </div>
-<div class="form-group floating-label-form-group">
+<div class="form-group">
 <label>Password</label>
 <input type="password" name="password" class="form-control" id="newPass" placeholder="Password" required>
 <span toggle="#newPass" class="fa fa-fw fa-eye field-icon toggle-password"></span>

@@ -11,7 +11,7 @@ exit;
 $qsDeal = mysqli_query($connect, "select * from deals where status = 'approved' && end_date >= CURDATE() || status = 'approved' && end_date = '' order by rand() limit 0,12");
 $nsDeal = mysqli_num_rows($qsDeal);
 
-$qsTask = mysqli_query($connect, "select * from tasks where status = 'approved' && end_date >= CURDATE() || status = 'approved' && end_date = '' order by rand() limit 0,12");
+$qsTask = mysqli_query($connect, "select * from tasks where status = 'approved' &&  CURDATE() <= end_date || status = 'approved' && end_date = '' order by rand() limit 0,12");
 $nsTask = mysqli_num_rows($qsTask);
 
 $qsCash = mysqli_query($connect, "select * from cashback where status = 'approved' order by rand() limit 0,4");
@@ -46,6 +46,18 @@ $nsCash = mysqli_num_rows($qsCash);
 <link rel="stylesheet" href="assets/css/owl.theme.css">
 <!-- Custom styles for this template-->
 <link href="assets/css/style.css" rel="stylesheet">
+<!-- Hotjar Tracking Code for www.faceflyer.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1964395,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<script data-ad-client="ca-pub-2411535938940450" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
 <body id="page-top">
@@ -101,9 +113,17 @@ class="icofont-search"></i></button>
 </section>
 
 <div class="container">
-<div id="leadboard" align="center">
-<img src="assets/images/leaderboard.jpeg" alt="ads" class="img-fluid" />
-</div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Faceflyer Leaderboard -->
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-2411535938940450"
+data-ad-slot="1634923446"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 </div>
 
 <section class="section-padding homepage-store-block">

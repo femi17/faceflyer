@@ -10,7 +10,7 @@ exit;
 
 $id = mysqli_real_escape_string($connect, multiexplode(array("/","/"),$_SERVER['REQUEST_URI'],'task-details'));
 
-$qsTask = mysqli_query($connect, "select * from tasks where id = '$id' && end_date > CURDATE() || end_date = '' && id = '$id'");
+$qsTask = mysqli_query($connect, "select * from tasks where id = '$id' && CURDATE() <= end_date || end_date = '' && id = '$id'");
 $rsTask = mysqli_fetch_assoc($qsTask);
 
 if(mysqli_num_rows($qsTask) <= 0){
@@ -99,7 +99,7 @@ src="../assets/images/<?php echo $rsTask['banner'] ?>">
 <?php echo $rsTask['description'] ?></h6>
 <p class="mb-0 mt-4 font-weight-light text-gray-500"><i
 class="icofont-users-alt-4 text-danger mr-2"></i> <?php echo $rsTask['count'] ?> People completed task
-<?php if($rsTask['end_date'] && $rsTask['end_date'] > date('Y-m-d')){ ?>
+<?php if($rsTask['end_date'] && date('Y-m-d') <= $rsTask['end_date']){ ?>
 <i class="ml-4 icofont-clock-time text-danger mr-2"></i> Ends <?php echo date('m.d.Y', strtotime($rsTask['end_date']))?></p>
 <?php }else{ ?>
 <i class="ml-4 icofont-clock-time text-danger mr-2"></i> This tasks has ended

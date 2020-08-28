@@ -9,7 +9,7 @@ $amount =  299 * 100;
 }elseif($_SESSION['facePlan'] == "premium"){
 $amount =  599 * 100;
 }
-$callback_url = 'http://localhost/faceflyer/partner-with-us/callback.php';
+$callback_url = 'http://faceflyer.com/partner-with-us/callback.php';
 
 $result = array();
 //Set other parameters as keys in the $postdata array

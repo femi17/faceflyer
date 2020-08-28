@@ -16,7 +16,7 @@ $row = mysqli_fetch_assoc($query);
 
 if($foundUser > 0){
 
-header('Location: reset-password?p='.base64_encode($email).'&rt='.base64_encode($otp));
+header('Location: reset-password?p='.base64_encode($row['email']).'&rt='.base64_encode($otp));
 exit;
 }else{
 header('Location: forgot-password?error=1');

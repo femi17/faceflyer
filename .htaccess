@@ -1,9 +1,15 @@
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule (.*) $1.php [L]
+# RewriteEngine On
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule (.*) $1.php [L]
+
+IndexIgnore *
+
+# 3 ---- Make pages render without their extension
+
+Options +MultiViews
 
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^central.ENYOretail.com [NC]
 RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI}/ [R=301,L]

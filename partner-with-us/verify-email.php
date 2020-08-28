@@ -5,7 +5,7 @@ if($_GET['token']){
 $token = mysqli_real_escape_string($connect, $_GET['token']);
 $qs = mysqli_query($connect, "select * from merchant where token = '$token' && status = 'pending'");
 if(mysqli_num_rows($qs) > 0){
-mysqli_query($connect, "update merchant set status = 'verified' where token = '$token'");
+mysqli_query($connect, "update merchant set status = 'verified', plan = 'free' where token = '$token'");
 $verified = 1;
 }else{
 $verified = 2;

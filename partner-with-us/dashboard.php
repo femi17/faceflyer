@@ -82,6 +82,7 @@ class="small ml-3">Upgrade</span>
 src="../assets/images/<?php echo merchantSignin($_SESSION['faceMerchant'], 'logo'); ?>">
 <h6 class="text-black mb-2 text-gray-900"><?php echo merchantSignin($_SESSION['faceMerchant'], 'store_name'); ?></h6>
 <p class="m-0">claims based on store</p>
+<h3><?php echo count_claim_merchant('tasks', 'approved', merchantSignin($_SESSION['faceMerchant'], 'store_name')) + count_claim_merchant('deals', 'approved', merchantSignin($_SESSION['faceMerchant'], 'store_name')) + count_claim_merchant('cashback', 'approved', merchantSignin($_SESSION['faceMerchant'], 'store_name'))?></h3>
 <p>&nbsp;</p>
 <button type="button" onClick="window.location.href='logout'" class="btn btn-primary btn-block"><i class="icofont-logout"></i>
 Logout</button>

@@ -9,7 +9,7 @@ $store = $_POST['store'];
 $merchant = $_POST['merchant'];
 $id = $_POST['id'];
 
-$subject = $name ."has been approved";
+$subject = $name ." has been approved";
 $message = 'Hi '.$store.'<br><br>
 You post <b>'.$name.'</b> has been approved and is currently showing on faceflyer.<br><br>
 Thank you for using faceflyer.';

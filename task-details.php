@@ -101,6 +101,8 @@ src="../assets/images/<?php echo $rsTask['banner'] ?>">
 class="icofont-users-alt-4 text-danger mr-2"></i> <?php echo $rsTask['count'] ?> People completed task
 <?php if($rsTask['end_date'] && date('Y-m-d') <= $rsTask['end_date']){ ?>
 <i class="ml-4 icofont-clock-time text-danger mr-2"></i> Ends <?php echo date('m.d.Y', strtotime($rsTask['end_date']))?></p>
+<?php }elseif(!$rsTask['end_date']){ ?>
+<i class="ml-4 icofont-clock-time text-danger mr-2"></i> This tasks has no deadline
 <?php }else{ ?>
 <i class="ml-4 icofont-clock-time text-danger mr-2"></i> This tasks has ended
 <?php } ?>

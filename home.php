@@ -11,7 +11,7 @@ exit;
 $qsDeal = mysqli_query($connect, "select * from deals where status = 'approved' && end_date >= CURDATE() || status = 'approved' && end_date = '' order by rand() limit 0,12");
 $nsDeal = mysqli_num_rows($qsDeal);
 
-$qsTask = mysqli_query($connect, "select * from tasks where status = 'approved' &&  CURDATE() <= end_date || status = 'approved' && end_date = '' order by rand() limit 0,12");
+$qsTask = mysqli_query($connect, "select * from tasks where status = 'approved' &&  CURDATE() <= end_date || status = 'approved' && end_date = '' order by rand() limit 0,4");
 $nsTask = mysqli_num_rows($qsTask);
 
 $qsCash = mysqli_query($connect, "select * from cashback where status = 'approved' order by rand() limit 0,4");
@@ -57,7 +57,7 @@ $nsCash = mysqli_num_rows($qsCash);
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
-<script data-ad-client="ca-pub-2411535938940450" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script data-ad-client="ca-pub-3837054503315569" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
 <body id="page-top">
@@ -113,24 +113,14 @@ class="icofont-search"></i></button>
 </section>
 
 <div class="container">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Faceflyer Leaderboard -->
-<ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-2411535938940450"
-data-ad-slot="1634923446"
-data-ad-format="auto"
-data-full-width-responsive="true"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 </div>
 
 <section class="section-padding homepage-store-block">
 <div class="container">
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
 <h1 class="h5 mb-0 text-gray-900">Tasks</h1>
-<?php if($nsTask > 4){ ?>
+<?php if($nsTask > 3){ ?>
 <a href="tasks" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
 class="fa fa-eye fa-sm text-white-50"></i> View All</a>
 <?php } ?>

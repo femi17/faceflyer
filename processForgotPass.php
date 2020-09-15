@@ -21,7 +21,7 @@ $subject = "Your Recovered Password";
 $heading = "Password Recovery";
 $message = 'Hello <strong>'.$row['firstname'].'</strong>,<br><br>
 Please use the number below to reset your password.<br><br>
-<strong>'.$pass.'</strong>';
+<strong>'.$otp.'</strong>';
 
 $from_email = 'no-reply@faceflyer.com';
 
